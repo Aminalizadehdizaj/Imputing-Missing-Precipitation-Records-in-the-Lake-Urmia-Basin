@@ -1,6 +1,6 @@
-# Imputation of Missing Monthly Meteorological Data Using Linear Regression: A Comprehensive Case Study of Lake Urmia Basin's Stations Based on Proximity, Data Coverage, and Correlation
+# Imputation of Missing Monthly Precipitation Data Using Linear Regression: A Comprehensive Case Study of Lake Urmia Basin's Stations Based on Proximity, Data Coverage, and Correlation
 
-This script is designed to impute missing precipitation data for weather stations using a machine learning approach based on linear regression. The primary goal is to fill missing values in the precipitation records by leveraging data from geographically and statistically similar stations.
+This script is designed to impute missing precipitation data for weather stations using a machine learning approach based on linear regression. The primary goal is to fill missing values in the precipitation records by leveraging data from **geographically** and **statistically** similar stations.
 
 ### Methodology:
 1. **Data Preparation:** 
