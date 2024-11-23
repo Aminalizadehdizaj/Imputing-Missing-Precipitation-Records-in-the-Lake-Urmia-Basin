@@ -1,23 +1,20 @@
-# Imputation of Missing Monthly Precipitation Data Using Linear Regression: A Comprehensive Case Study of Lake Urmia Basin's Stations Based on Proximity, Data Coverage, and Correlation
+## Techniques Used
 
-This script is designed to impute missing precipitation data for weather stations using a machine learning approach based on linear regression. The primary goal is to fill missing values in the precipitation records by leveraging data from **geographically** and **statistically** similar stations.
-
-### Methodology:
-1. **Data Preparation:** 
-   - The precipitation dataset is filtered for a 30-year period, with data from the Solar Hijri (Solar) calendar, where `136801` represents the first month of the year 1368 in the Solar calendar.
-   - Stations with missing precipitation data are identified for imputation.
-
-2. **Distance Calculation:** 
-   - The Euclidean distance between stations is computed based on their UTM coordinates (latitude and longitude), and these distances are ranked for proximity.
-
-3. **Imputation Using Linear Regression:** 
-   - For each station with missing data, the script searches for the nearest station with data available for the same dates.
-   - Linear regression models are trained using data from the nearest station to predict the missing precipitation values.
+1. **Linear Regression**:
+   - Linear regression models are trained on precipitation data from nearby stations to predict missing values based on the correlation between stations.
    
-4. **Model Evaluation:** 
-   - The performance of the imputation model is evaluated using R², RMSE, and MAE metrics, and the linear regression equation is computed for each station.
+2. **HistGradientBoostingRegressor**:
+   - A powerful gradient boosting algorithm that is used to impute missing precipitation data by fitting the model to nearby station data, optimizing for regression tasks using **cross-validation**.
 
-5. **Results:** 
-   - The imputation results, including performance metrics and regression equations, are saved to a new Excel file for further analysis.
+## Features
 
-This approach helps fill missing precipitation values efficiently while considering both spatial proximity and statistical similarity, ensuring the imputed data is as accurate as possible.
+- **Data Preprocessing**: Loads and processes precipitation data, with stations as columns and dates as the index.
+- **Spatial Analysis**: Calculates Euclidean distances between stations to group them by proximity and use nearby stations for imputation.
+- **Model Evaluation**: Evaluates model performance with metrics like **R²**, **MSE**, **RMSE**, and **MAE**.
+- **Cross-Validation**: Implements cross-validation to assess model performance on imputed data.
+- **Distance-based Grouping**: Dynamically groups stations by their distance to create more accurate imputation models.
+
+## Files
+
+- `linear_regression_imputation.py`: Implements the linear regression-based imputation model.
+- `histgradientboosting_imputation.py`: Implements the HistGradientBoostingRegressor-based imputation model.
