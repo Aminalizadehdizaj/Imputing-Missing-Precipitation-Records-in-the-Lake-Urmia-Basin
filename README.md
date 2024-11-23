@@ -1,3 +1,7 @@
+# Precipitation Data Imputation
+
+This repository contains Python code for imputing missing precipitation data using two machine learning techniques: **Linear Regression** and **HistGradientBoostingRegressor**. The project uses meteorological data, including precipitation values from multiple weather stations, and leverages spatial relationships between stations for accurate data imputation.
+
 ## Techniques Used
 
 1. **Linear Regression**:
