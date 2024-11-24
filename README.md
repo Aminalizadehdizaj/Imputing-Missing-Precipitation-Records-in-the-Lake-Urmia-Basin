@@ -5,7 +5,7 @@ This repository contains Python code for imputing missing precipitation data usi
 ## Techniques Used
 
 1. **Linear Regression**:
-   - Linear regression models are trained on precipitation data from nearby stations to predict missing values based on the correlation between stations.
+   - Linear regression models are trained on precipitation data from a nearby station to predict missing values based on the correlation between stations.
    
 2. **HistGradientBoostingRegressor**:
    - A powerful gradient boosting algorithm that is used to impute missing precipitation data by fitting the model to nearby station data, optimizing for regression tasks using **cross-validation**.
